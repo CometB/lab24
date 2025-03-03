@@ -18,13 +18,33 @@ int main(){
 	list<string>::iterator loc;
 	
 	line_up.push_back("Alice");
+	
 	line_up.push_back("Bob");
 	
 	loc = find(line_up.begin(),line_up.end(),"Bob");
 	line_up.insert(loc,"Oscar");
 	
 	//Write your code here
+	line_up.push_back("Luffy");
+	line_up.push_back("Sanji");
+	line_up.push_back("Nami");
 	
+	for(int i=0;i<2;i++) line_up.pop_front();
+	
+	loc = find(line_up.begin(),line_up.end(),"Luffy");
+	loc++;
+	line_up.insert(loc,"Narutu");
+	
+	line_up.push_front("Prayath");
+	
+	loc = find(line_up.begin(),line_up.end(),"Prayath");
+	loc++;
+	line_up.insert(loc,"Tony");
+	
+	line_up.remove("Bob");
+	
+	for(int i=0;i<3;i++) line_up.pop_front();
+
 	printList(line_up);
 		
 	return 0;
